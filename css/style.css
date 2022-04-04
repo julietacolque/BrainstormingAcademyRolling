@@ -1,0 +1,345 @@
+:root {
+  /*------- PALETA ELEGIDA -----------*/
+  --primer-color: #041c32;
+  --segundo-color: #04293a;
+  --tercer-color: #064663;
+  --cuarto-color: #ecb365;
+  --quinto-color: #ffc107;
+  /*---------GRADIENT---------------*/
+  --color-gradient: #a05d009f;
+  --color-gradient-2: #00acfb34;
+  --background-gradient: linear-gradient(
+    135deg,
+    var(--color-gradient) 0%,
+    var(--color-gradient-2) 100%
+  );
+  --font-family: "Ubuntu", sans-serif;
+  --sombradetexto: -1px -1px 5px rgba(0, 0, 0, 0.41);
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+.color-white {
+  color: white !important;
+}
+/* -----------------------------------NAVBAR-------------------------------- */
+
+.navbar {
+  font-size: 1.1em;
+}
+
+.navbar img {
+  width: 60px;
+  height: 60px;
+}
+.container-links{
+  width: 22%;
+ 
+}
+.bg-primer {
+  background-color: var(--primer-color);
+}
+
+.navbar-toggler {
+  background-color: var(--tercer-color);
+}
+
+.fa-solid {
+  padding-right: 5px;
+}
+
+.nav-item a:hover {
+    border-bottom: 1px solid var(--quinto-color);
+}
+
+@media (min-width:1018px) {
+   .container-links{
+     width: 15%;
+   }
+}
+
+/************** IMAGEN DE FONDO ******************/
+.bg-img-banner {
+  height: 100vh;
+  background-image: var(--background-gradient), url("../IMG/section-baner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/**************** PRESENTACION *******/
+.presentation {
+  display: flex;
+  height: 80%;
+}
+.color-h1 {
+  color: white;
+  text-shadow: -3px 1px 0px var(--tercer-color);
+  background-color: rgb(rgb(207, 204, 204));
+}
+
+.buttons {
+  display: inline-block;
+}
+.p-button {
+  border-radius: 19px;
+  border: 2px solid var(--cuarto-color);
+  padding: 10px 10px;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: 100;
+  text-decoration: none;
+}
+.btn-cursos:hover {
+  background-color: #efefefef;
+  color: var(--primer-color);
+  transition: background 0.4s 0.1s ease-in-out;
+}
+
+.btn-campus:hover {
+  background-color: var(--segundo-color);
+  color: white;
+  transition: background 0.4s 0.1s ease-in-out;
+}
+.btn-cursos {
+  background-color: var(--segundo-color);
+  color: white;
+}
+.btn-campus {
+  background-color: #efefefef;
+  color: var(--primer-color);
+}
+
+/************* DIV CUADROS *****************/
+.row {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.bg-color-blue {
+  background-color: rgba(0, 70, 99, 0.2);
+  min-height: 110px;
+}
+
+.fa-book,
+.fa-user-graduate,
+.fa-chalkboard-teacher {
+  font-size: 3em;
+  color: var(--segundo-color);
+  /* color: var(--quinto-color); */
+}
+
+.div-tittle {
+  color: #ffffff;
+  font-family: var(--font-family);
+  font-weight: 400;
+}
+
+
+.botonCursos{
+  color: var(--quinto-color);
+}
+/*--------------------------MEDIAS--------------------------------*/
+
+@media (max-width: 600px) {
+  .presentation {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .h1 {
+    font-size: 2.7em;
+  }
+  .slogan {
+    font-size: 1.3em;
+  }
+  .p-button {
+    font-size: 1.2em;
+    padding: 12px 12px;
+    border-radius: 23px;
+  }
+}
+
+/*---------------------------------------------------------*/
+@media (min-width: 600px) {
+  .presentation {
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+  }
+
+  .h1 {
+    font-size: 3em;
+  }
+
+  .slogan {
+    font-size: 1.3em;
+    color: #fefefefe;
+  }
+
+  .p-button {
+    font-size: 1.3em;
+  }
+}
+/*-------------------------carrusel--------------------------------*/
+.carrousel {
+  margin: 13px auto;
+  padding-top: 40px;
+}
+
+.carrousel img {
+  width: 100px;
+  height: 100px;
+}
+
+.img-border {
+  border-radius: 50%;
+}
+
+.color-estrellas {
+  color: var(--cuarto-color);
+}
+.card-container {
+  width: 400px;
+  height: 280px;
+
+}
+
+.decoration {
+  text-decoration: none;
+  transition: 1s;
+}
+
+/* ------------------MEDIA QUERIES------------------ */
+
+@media (max-width: 1500px) {
+  .card4-media {
+    display: none;
+  }
+}
+
+@media (max-width: 960px) {
+  .card3-media {
+    display: none;
+  }
+  .img-media {
+    width: 150px;
+  }
+}
+
+@media (max-width: 585px) {
+  .card2-media {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .img-media {
+    width: 100px;
+  }
+  .clasificacion-media {
+    display: none;
+  }
+}
+
+/* -------------------------------------------CURSOS---------------------------------- */
+.cursos-color {
+  background-color: var(--primer-color);
+  padding-bottom: 50px;
+  box-shadow: 6px -12px 5px 0px rgba(6, 4, 41, 0.253);
+}
+article {
+  text-align: center;
+  font-weight: bold;
+  text-shadow: var(--sombradetexto);
+  color: white;
+  padding: 20px;
+}
+
+.categorias {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.btn-color  {
+  color: white;
+}
+
+.btn a {
+  text-decoration: none;
+}
+
+
+
+.categorias a:hover {
+  color: var(--quinto-color);
+}
+.borde {
+  border: 1px solid var(--quinto-color);
+}
+.card {
+  width: 20rem;
+  margin-bottom: 50px;
+  color: #a05d009f;
+  background-color: #fefefe00;
+}
+
+.color-warning {
+  color: var(--quinto-color);
+}
+
+figcaption {
+  margin-bottom: 15px;
+  color: white;
+}
+
+.card.flex {
+  margin: 15px auto;
+}
+
+/*-------------------- FOOTER --------------------*/
+
+footer {
+  background: var(--primer-color);
+  color: #fefefe;
+  box-shadow: 6px -12px 5px 0px rgba(6, 4, 41, 1);
+}
+.copyright {
+  background-color: var(--segundo-color);
+  margin-top: 300px;
+  text-align: center;
+}
+footer ul li {
+  list-style: none;
+}
+
+
+footer a {
+  display: inline-block;
+  text-decoration: none;
+  color: #0d6efd;
+}
+hr {
+  color: #fefefe;
+}
+
+.texttarea {
+  resize: none;
+}
+
+.btn-enviar{
+  width:40px;
+}
+/*------------------------- PAGINA DE ERROR ---------------------------*/
+.img-error {
+  height:  100vh;
+}
+.contenedor-img{
+  display: flex;
+  justify-content: center;
+}
